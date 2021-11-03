@@ -15,7 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('post_id');
-            $table->bigInteger('author_id');
+            $table->bigInteger('author_id')->unsigned();
             $table->string('title');
             $table->string('short_title');
             $table->string('img')->nullable();
@@ -23,8 +23,8 @@ class CreatePostsTable extends Migration
 
             $table->timestamps();
 
-//            $table->foreign('author_id')->references('id')->on('users');
-            $table->foreign('title')->references('name')->on('users');
+            $table->foreign('author_id')->references('id')->on('users');
+//            $table->foreign('title')->references('name')->on('users');
         });
     }
 
