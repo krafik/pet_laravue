@@ -7,10 +7,10 @@ window._ = require('lodash');
  */
 
 try {
-    window.Popper = require('popper.js').default;
+    // window.Popper = require('popper.js').default;
     window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap');
+    // require('bootstrap');
 } catch (e) {}
 
 /**
@@ -22,6 +22,30 @@ try {
 window.axios = require('axios');
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+// axios.interceptors.response.use(
+//     response => {
+//         return response.data;
+//     },
+//     error => {
+//         let errors = ["Something went wrong, please try again!"];
+//
+//         if (error.response) {
+//             if (error.response.data.errors) errors = error.response.data.errors;
+//             if (error.response.data.error) errors = [error.response.data.error];
+//             if (error.response.status === 401) window.location.href = '/login';
+//         } else if (error.request) {
+//             console.log(error.request);
+//         } else {
+//             console.log('Error', error.message);
+//         }
+//
+//         return Promise.reject({
+//             status: error.response.status,
+//             errors: errors
+//         });
+//     }
+// );
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

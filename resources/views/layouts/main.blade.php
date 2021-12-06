@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
     {{--    <link rel="stylesheet" href="{{asset('css/app.css')}}">--}}
 
-
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <link rel="stylesheet" href="{{asset('plugins/bootstrap/bootstrap.min.css')}}">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome/css/all.min.css')}}">
@@ -223,6 +223,9 @@
         <!--/ Navigation end -->
     </header>
     <!--/ Header end -->
+    <div id="app">
+        <example-component></example-component>
+    </div>
     @yield('content')
     <footer id="footer" class="footer bg-overlay">
         <div class="footer-main">
@@ -318,7 +321,7 @@
     {{--    <script src="plugins/jQuery/jquery.min.js"></script>--}}
     <script src="{{asset('plugins/jQuery/jquery.min.js')}}"></script>
     <!-- Bootstrap jQuery -->
-    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>
+{{--    <script src="plugins/bootstrap/bootstrap.min.js" defer></script>--}}
     <!-- Slick Carousel -->
     <script src="plugins/slick/slick.min.js"></script>
     <script src="plugins/slick/slick-animation.min.js"></script>
